@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Poetsen+One&display=swap');
 
 * {
     padding: 0;
@@ -9,14 +9,14 @@
 /* General styles */
 body {
     min-height: 100vh;
-    font-family: "Radio Canada Big", sans-serif;
+    font-family: "Mukta", sans-serif;
 }
 
 h1, h2, h3 {
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
     letter-spacing: 2px;
-    color: rgb(0, 0, 0);
+    color: white;
     text-transform: uppercase;
 }
 
@@ -37,6 +37,8 @@ nav {
     padding: 20px 20px;
     width: 100%;
     font-size: 200%;
+    font-weight: bold;
+    text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.2);
 }
 
 #menu {
@@ -81,8 +83,6 @@ nav {
     cursor: pointer;
     font-size: 2em;
     color: white;
-    text-align: right;
-    padding: 10px;
 }
 
 #nav-check {
@@ -100,6 +100,11 @@ nav {
     height: 100%; 
     padding: 20px; 
     align-items: center; 
+    z-index: 2;
+}
+
+#nav-check:checked + .nav-checkbtn + #menu .nav-closebtn {
+    display: block;
 }
 
 /* Hero section */
@@ -144,13 +149,51 @@ nav {
     margin-left: auto;
 }
 
+/* Contact */
+
+#contact {
+    width: 100%;
+    padding: 50px 0;
+    background: url(../images/background-contact.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: fit;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgba(107, 163, 210, 1);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20);
+}
+
+.contact-details {
+    width: 45%;
+    color: white;
+}
+
+.contact-details h2, .contact-details p {
+    margin-bottom: 10px;
+}
+
+.map {
+    width: 45%;
+}
+
+
+
 /* Media queries */
 @media (max-width: 768px) {
-    .nav-checkbtn {
-        display: block;
-    }
 
-    .nav-closebtn {
+    /* Nav and Hamburger Nav */
+
+    .nav-checkbtn {
         display: block;
     }
 
@@ -159,12 +202,30 @@ nav {
         flex-direction: column;
     }
 
-    #menu li {
-        margin: 10px 0;
+    #nav-check:checked + .nav-checkbtn + #menu {
+        display: flex;
     }
 
-    #menu li a {
-        padding: 15px;
-        border-bottom: 1px solid #555;
+    /* Contact Section */
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-details, .map {
+        width: 100%;
+    }
+
+    .contact-details {
+        margin-bottom: 20px;
+    }
+
+    /* Hero Cover Text */
+
+    #cover-text {
+        font-size: 200%;
+        top: 20%;
+        text-align: center;
     }
 }
