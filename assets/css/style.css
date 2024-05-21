@@ -204,31 +204,47 @@ nav {
 /* Footer */
 
 footer {
-    height: 100px;
     background: rgba(107, 163, 210, 1);
-    text-align: center;
-    width: 100%;
     color: #f1f1f1;
     text-decoration: none;
 }
 
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 20px 0;
+}
+
 .social li {
-    display: inline;
+    margin: 0 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social i {
     font-size: 200%;
     color: #f1f1f1;
-    margin: 10px 40px;
-}
-
-footer p {
-    font-size: 120%;
-    margin-top: 1%;
 }
 
 .fab:hover {
     transform: scale(1.5);
+}
+
+/* Signature */
+
+.signature {
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-heart {
+    font-size: 2em;
+    margin: 0 5px;
 }
 
 /* Media queries */
