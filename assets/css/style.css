@@ -158,7 +158,7 @@ nav {
 #contact {
     width: 100%;
     padding: 50px 0;
-    background: url(../images/background-contact.png);
+    background: url(../images/background-contact.png) center center / auto no-repeat fixed;
     background-position: center;
     background-repeat: repeat;
     background-size: fit;
