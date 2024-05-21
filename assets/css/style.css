@@ -7,6 +7,7 @@
 }
 
 /* General styles */
+
 body {
     min-height: 100vh;
     font-family: "Mukta", sans-serif;
@@ -21,6 +22,7 @@ h1, h2, h3 {
 }
 
 /* Header */
+
 header {
     position: fixed;
     top: 0;
@@ -30,6 +32,7 @@ header {
 }
 
 /* Navigation */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -68,12 +71,10 @@ nav {
 }
 
 /* Hamburger Nav */
+
 .nav-checkbtn {
     display: none;
     cursor: pointer;
-}
-
-.nav-checkbtn i {
     font-size: 2em;
     color: white;
 }
@@ -108,11 +109,13 @@ nav {
 }
 
 /* Hero section */
+
 #hero {
     height: 100vh;
     width: 100%;
     background: url("../images/hero-pic.jpg") no-repeat center center/cover;
     position: relative;
+    box-shadow: 0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20);
 }
 
 #cover-text h1 {
@@ -133,12 +136,13 @@ nav {
     justify-content: center;
     position: absolute;
     left: 30px;
-    top: 40%;
+    top: 35%;
     width: 33%;
     text-shadow: 3px 4px 7px rgba(81, 67, 210, 0.8);
 }
 
 /* Logo */
+
 #logo img {
     height: 150px;
     width: 150px;
@@ -174,16 +178,27 @@ nav {
 }
 
 .contact-details {
-    width: 45%;
+    margin-top: 5%;
+    width: 50%;
     color: white;
+    text-align: center;
+}
+
+.contact-details h2 {
+    font-size: 200%;
+}
+
+.contact-details p {
+    font-size: 150%;
 }
 
 .contact-details h2, .contact-details p {
     margin-bottom: 10px;
+    text-shadow: 3px 4px 7px rgba(81, 67, 210, 0.8);
 }
 
 .map {
-    width: 45%;
+    width: 50%;
 }
 
 
@@ -191,7 +206,7 @@ nav {
 /* Media queries */
 @media (max-width: 768px) {
 
-    /* Nav and Hamburger Nav */
+    /* Navigation and Hamburger Nav */
 
     .nav-checkbtn {
         display: block;
@@ -205,6 +220,12 @@ nav {
     #nav-check:checked + .nav-checkbtn + #menu {
         display: flex;
     }
+
+    #menu li a {
+        padding: 3px;
+    }
+
+    
 
     /* Contact Section */
 
@@ -225,7 +246,9 @@ nav {
 
     #cover-text {
         font-size: 200%;
-        top: 20%;
+        top: 30%;
         text-align: center;
+        width: 100%;
+        left: auto;
     }
 }
