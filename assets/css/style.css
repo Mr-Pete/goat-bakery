@@ -201,6 +201,51 @@ nav {
     width: 50%;
 }
 
+/* Services Section */
+#services {
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+
+.service {
+    flex: 1; 
+    background-size: cover;
+    background-position: center;
+    transition: background-size 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.service-content {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 12px;
+}
+
+#quality {
+    background-image: url("../images/box-a.jpg"); 
+}
+
+#ingredients {
+    background-image: url("../images/box-b.jpg");
+}
+
+.service:hover {
+    background-size: 120%;
+}
+
+.service h2, .service p {
+    padding: 10px;
+}
+
 /* Footer */
 
 footer {
@@ -293,5 +338,10 @@ footer {
         text-align: center;
         width: 100%;
         left: auto;
+    }
+
+    #services {
+        display: flex;
+        flex-direction: column;
     }
 }
