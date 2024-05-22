@@ -21,6 +21,7 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
+
 /* Header */
 
 header {
@@ -28,7 +29,7 @@ header {
     top: 0;
     width: 100%;
     background-color: transparent;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Navigation */
@@ -37,11 +38,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 20px 10px;
     width: 100%;
     font-size: 200%;
     font-weight: bold;
-    text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.2);
+    text-shadow:  rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 #menu {
@@ -51,23 +52,27 @@ nav {
 }
 
 #menu li {
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
 #menu li a {
     color: white;
     border-radius: 12px;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-#menu li a:hover {
+#menu li a:hover { 
     background-color: white;
     color: rgba(68, 68, 68, 0.9);
     border-radius: 12px;
     font-weight: bold;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.active {  
+    background-color:  rgba(107, 163, 210, 1);
 }
 
 /* Hamburger Nav */
@@ -84,6 +89,7 @@ nav {
     cursor: pointer;
     font-size: 2em;
     color: white;
+    
 }
 
 #nav-check {
@@ -101,7 +107,7 @@ nav {
     height: 100%; 
     padding: 20px; 
     align-items: center; 
-    z-index: 2;
+    z-index: 3;
 }
 
 #nav-check:checked + .nav-checkbtn + #menu .nav-closebtn {
@@ -129,7 +135,7 @@ nav {
 }
 
 #cover-text {
-    font-size: 250%;
+    font-size: 4vh;
     text-transform: uppercase;
     letter-spacing: 4px;
     text-align: left;
@@ -150,14 +156,14 @@ nav {
     border: 5px solid white;
     padding: 15px;
     overflow: visible;
-    margin-left: auto;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 /* Contact and Map */
 
-#contact {
+#contact, #services {
     width: 100%;
-    padding: 50px 0;
+    padding: 80px 0;
     background: url(../images/background-contact.png) center center / auto no-repeat fixed;
     background-position: center;
     background-repeat: repeat;
@@ -204,8 +210,8 @@ nav {
 /* Services Section */
 #services {
     display: flex;
-    width: 100%;
     height: 500px;
+    padding-top: 0px;
 }
 
 .service {
@@ -219,15 +225,25 @@ nav {
     position: relative;
     color: white;
     text-align: center;
-    padding: 20px;
     overflow: hidden;
+    box-shadow: 0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20);
+    
 }
 
 .service-content {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     background-color: rgba(0, 0, 0, 0.6); 
     border-radius: 12px;
+    width: 80%;
+}
+
+.service-content p {
+    font-size: 2vh;
+}
+
+.service-content h2 {
+    font-size: 2.5vh;
 }
 
 #quality {
@@ -246,32 +262,150 @@ nav {
     padding: 10px;
 }
 
+/* Order Form */
+
+.form {
+    background: url("../images/background-order.jpg") center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.quote-form {
+    color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.6); 
+    max-width: 800px;
+    width: 80%;
+    padding: 30px;
+}
+
+.quote-form h2 {
+    color: #f1f1f1;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 3.5vh;
+    text-align: center;
+
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    width: 30%;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.form-group input,
+.form-group select {
+    background: transparent;
+    color: #f1f1f1;
+    width: 70%;
+    height: 25px;
+    margin: 5px 0;
+    border: 2px solid #eccece;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.text-input:hover,
+input[type=date]:hover,
+input[type=range]:hover,
+input[type=radio]:hover,
+select:hover {
+    border-color: rgba(107, 163, 210, 1);
+}
+
+.send-button {
+    border-radius: 12px;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(107, 163, 210, 1);
+    color: white;
+    display: block;
+    margin: 2% auto;
+}
+
+.send-button:hover {
+    background-color: white;
+    color: #bd1736;
+}
+
+legend {
+    font-size: 2vh;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+input[type=date],
+input[type=range],
+input[type=radio],
+select {
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+fieldset.extras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.extras input[type=radio] {
+    width: auto;
+    margin: 0 10px;
+}
+
+.extras .form-group {
+    margin: 0 10px;
+}
+
 /* Footer */
 
 footer {
+    height: 10vh;
     background: rgba(107, 163, 210, 1);
-    color: #f1f1f1;
+    text-align: center;
+    width: 100%;
+    color: white;
     text-decoration: none;
-}
-
-.social {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    list-style-type: none;
-    padding: 20px 0;
+    flex-shrink: 0;
 }
 
-.social li {
-    margin: 0 40px; 
+footer ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    list-style: none;
+    padding: 0;
 }
 
-.social i {
-    font-size: 200%;
+footer ul li {
+    margin: 0 30px;
+}
+
+footer ul li a {
     color: #f1f1f1;
+    font-size: 2.5vh;
+}
+
+footer p {
+    font-size: 1.25vh;
+    margin-top: 1%;
 }
 
 .fab:hover {
@@ -294,6 +428,33 @@ footer {
 
 /* Media queries */
 
+/* For medium screens */
+
+@media (max-width: 1170px) {
+     /* Services */
+
+     #services {
+        display: flex;
+        flex-direction: column;
+        height: 1000px;
+    }
+    
+    .service {
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    .service-content {
+        width: 100%;
+    }
+
+    /* Hero section */
+
+    #cover-text {
+        font-size: 3.5vh;
+    }
+}
+/* For small screens */
+
 @media (max-width: 768px) {
 
     /* Navigation and Hamburger Nav */
@@ -311,13 +472,22 @@ footer {
         display: flex;
     }
 
+    /* Hero section */
+
+    #cover-text {
+        top: 40%;
+        text-align: center;
+        width: 100%;
+        left: auto;
+}
+
     #menu li a {
         padding: 3px;
     }
 
-    /* Contact Section */
+     /* Contact Section */
 
-    .container {
+     .container {
         flex-direction: column;
         align-items: center;
     }
@@ -328,20 +498,33 @@ footer {
 
     .contact-details {
         margin-bottom: 20px;
+    }   
+
+    /* Order Form */
+
+    .form {
+        height: 1200px;
     }
 
-    /* Hero Cover Text */
-
-    #cover-text {
-        font-size: 200%;
-        top: 30%;
-        text-align: center;
-        width: 100%;
-        left: auto;
+    .quote-form {
+        padding: 20px;
+        margin-top: 150px;
     }
 
-    #services {
-        display: flex;
+    .form-group {
         flex-direction: column;
+        align-items: flex-start;
     }
+
+    .form-group label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+    }
+
+   
 }
