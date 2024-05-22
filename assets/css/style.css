@@ -147,7 +147,38 @@ nav {
     text-shadow: 3px 4px 7px rgba(81, 67, 210, 0.8);
 }
 
+/* Hero video */
+
+video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#hero-video video {
+
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20);
+
+}
+
 /* Logo */
+
+#logo {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
 
 #logo img {
     height: 150px;
@@ -161,7 +192,7 @@ nav {
 
 /* Contact and Map */
 
-#contact, #services {
+#contact, #services, #cakes-menu {
     width: 100%;
     padding: 80px 0;
     background: url(../images/background-contact.png) center center / auto no-repeat fixed;
@@ -265,7 +296,7 @@ nav {
 /* Order Form */
 
 .form {
-    background: url("../images/background-order.jpg") center center / cover no-repeat;
+    background: url("../images/background-order.jpg") center top / cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -287,7 +318,7 @@ nav {
     color: #f1f1f1;
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: 3.5vh;
+    font-size: 3vh;
     text-align: center;
 
 }
@@ -372,6 +403,34 @@ fieldset.extras {
     margin: 0 10px;
 }
 
+/* Cakes Menu Page */
+#cakes-menu {
+    height: 60vh;
+}
+
+.menu-section {
+    margin-bottom: 40px;
+}
+
+.menu-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu-item {
+    margin-bottom: 20px;
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+}
+
+.menu-item p {
+    font-size: 1em;
+    color: rgb(221, 226, 230);
+}
+
 /* Footer */
 
 footer {
@@ -431,7 +490,8 @@ footer p {
 /* For medium screens */
 
 @media (max-width: 1170px) {
-     /* Services */
+     
+    /* Services */
 
      #services {
         display: flex;
@@ -451,6 +511,12 @@ footer p {
 
     #cover-text {
         font-size: 3.5vh;
+    }
+
+    /*Cakes Menu */
+
+    #cakes-menu {
+        height: 50%;
     }
 }
 /* For small screens */
@@ -503,7 +569,7 @@ footer p {
     /* Order Form */
 
     .form {
-        height: 1200px;
+        height: 1250px;
     }
 
     .quote-form {
